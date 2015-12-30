@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.TreeMap;
 
@@ -63,7 +64,7 @@ public class KnyguPrekyba {
     }
 
     public void skirtingosLeidyklos(){
-        TreeMap<String, Integer> map = new TreeMap<>();
+        HashMap<String, Integer> map = new HashMap<>();
         for (Knyga k : sarasas) {
             String leidy = k.getLeidykla();
             if(map.containsKey(leidy)){
