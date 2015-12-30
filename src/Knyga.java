@@ -50,12 +50,14 @@ public class Knyga implements Comparable<Knyga> {
         return false;
     }
 
+
+
     public static final Comparator<Knyga> pagalKaina = Knyga::compareTo;
 
     public static final Comparator<Knyga> pagalPuslapius = new Comparator<Knyga>() {
         @Override
         public int compare(Knyga o1, Knyga o2) {
-            if (o1.equals(o2)) {
+            if (o1.puslapiai == o2.puslapiai) {
                 return 0;
             }
             return o1.puslapiai < o2.puslapiai ? -1 : 1;
