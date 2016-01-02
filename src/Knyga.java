@@ -59,10 +59,7 @@ public class Knyga implements Comparable<Knyga> {
         public int compare(Knyga o1, Knyga o2) {
             int pagalAutoriu = o1.autorius.compareTo(o2.autorius);
             if(pagalAutoriu == 0){
-                if(o1.kaina == o2.kaina){
-                    return 0;
-                }
-                return o1.kaina < o2.kaina ? -1 : 1;
+                return Float.compare(o1.kaina, o2.kaina);
             }
             return pagalAutoriu;
         }
